@@ -1,12 +1,15 @@
 import React from "react";
  import {useState,useEffect} from "react"
+ import ReactLoading from 'react-loading';
  import "./Nav.css"
 const Home =()=>{
   const [data ,setdata] = useState([])
+  const [Loding ,setLoding] = useState(false)
 
   useEffect(()=>{
   fetch("https://dummyjson.com/products")
   .then(response=>response.json()).then((res)=>setdata(res.products)).catch(()=>{console.log("data not found")})
+  setLoding(true);
    
    
 
@@ -20,6 +23,7 @@ const Home =()=>{
   
       <div className="box">
       {
+        (!Loding)? <ReactLoading type={"sspinningBubbles"} color={"skyblue"} height={667} width={375} /> :
       data.map((data)=>(
         // console.log(data.brand)
       
