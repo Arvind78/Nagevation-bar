@@ -15,7 +15,7 @@ const Home =()=>{
       setLoding(true);
        
        
-    },5000)
+    },2000)
 
 
   },[])
