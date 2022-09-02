@@ -4,6 +4,7 @@
   width: 100%;
   justify-content: space-around;
   display: flex;
+  position: sticky;
  align-items: center;
 }
 a.active{
@@ -13,5 +14,33 @@ a{
    text-decoration: none;
    color: aliceblue;
   font-size:18px;
+
+}
+.box{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+ 
+
+  
+}
+.data{
+  width: 200px;
+height: 300px;
+background-color: black;
+border:2px solid #f55;
+color: WHITE;
+margin-top: 20PX;
+text-align: center;
+border-radius: 5PX;
+}
+img {
+  height: 80%;
+  width: 100%;
+   
+  margin-top: 5px;
 
 }
