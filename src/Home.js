@@ -23,7 +23,7 @@ const Home =()=>{
   
       <div className="box">
       {
-        (!Loding)? <ReactLoading type={"sspinningBubbles"} color={"skyblue"} height={667} width={375} /> :
+        (!Loding)? <ReactLoading type={"sspinningBubbles"} color={"skyblue"} height={60} width={60} /> :
       data.map((data)=>(
         // console.log(data.brand)
       
