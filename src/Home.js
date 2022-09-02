@@ -1,17 +1,22 @@
 import React from "react";
  import {useState,useEffect} from "react"
- import ReactLoading from 'react-loading';
+
  import "./Nav.css"
+ import Loading from "./Loading"
+ import Login from "./Login"
 const Home =()=>{
   const [data ,setdata] = useState([])
   const [Loding ,setLoding] = useState(false)
 
   useEffect(()=>{
-  fetch("https://dummyjson.com/products")
-  .then(response=>response.json()).then((res)=>setdata(res.products)).catch(()=>{console.log("data not found")})
-  setLoding(true);
-   
-   
+    setTimeout(()=>{
+      fetch("https://dummyjson.com/products")
+      .then(response=>response.json()).then((res)=>setdata(res.products)).catch(()=>{console.log("data not found")})
+      setLoding(true);
+       
+       
+    },5000)
+
 
   },[])
 
@@ -23,7 +28,8 @@ const Home =()=>{
   
       <div className="box">
       {
-        (!Loding)? <ReactLoading type={"sspinningBubbles"} color={"skyblue"} height={60} width={60} /> :
+       
+        (!Loding)? <Loading/> :
       data.map((data)=>(
         // console.log(data.brand)
       
