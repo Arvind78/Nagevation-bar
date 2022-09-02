@@ -7,6 +7,7 @@ import React from "react";
 const Home =()=>{
   const [data ,setdata] = useState([])
   const [Loding ,setLoding] = useState(false)
+  const [Search , setSearch]=useState("")
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -25,12 +26,19 @@ const Home =()=>{
   }
   return (
     <>
-  
+       <input type="text" placeholder="Search.." value={Search} onChange={(e)=>setSearch(e.target.value)}/>
       <div className="box">
       {
        
         (!Loding)? <Loading/> :
-      data.map((data)=>(
+      data.filter((item)=>{
+        if(Search==""){
+          return item;
+        }else if(
+          item.brand.toLowerCase().includes(Search.toLowerCase())){
+          return item;
+        }
+      }).map((data)=>(
         // console.log(data.brand)
       
         <div className="data">

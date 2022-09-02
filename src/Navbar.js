@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Nav.css"
 import {NavLink} from "react-router-dom"
+
 const Nav =()=>{
+ 
   return (
   <>
   <header className="header">
@@ -9,6 +11,10 @@ const Nav =()=>{
   <NavLink to ="/about">About</NavLink>
   <NavLink to ="/login">Login</NavLink>
   <NavLink to ="/singup">Signup</NavLink>
+
+
+
+ 
    
 </header>
     </>

@@ -4,7 +4,7 @@ import React from "react"
 const Loading = ()=>{
   return  (
    
-   <ReactLoading type={"bars"} color={"blue"} height={60} width={60} />
+   <ReactLoading type={"bars"} color={"blue"} height={60} width={50} />
 
 
   )
